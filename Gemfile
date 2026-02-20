@@ -11,10 +11,10 @@ source "https://rubygems.org"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
+gem "github-pages", "~> 232", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.15.1"
+  gem "jekyll-feed", "~> 0.17"
   gem 'jekyll-redirect-from'
   gem 'jekyll-github-metadata'
 end
@@ -30,4 +30,4 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.9"
