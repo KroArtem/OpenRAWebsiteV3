@@ -3,8 +3,12 @@
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
   crossorigin="anonymous"></script>
 <script src="{{ '/scripts/vendor/svgxuse.min.js' | relative_url }}" async></script>
-<script src="{{ '/scripts/vendor/lite-youtube-embed.js' | relative_url }}" async></script>
+<script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.4/src/lite-yt-embed.js" integrity="sha256-UyTkvYZC/3h/rCA7QBuOG/oGQCKOOJ4WOotzj/Dd70Y=" crossorigin="anonymous" async></script>
 <script src="{{ '/scripts/global.js' | relative_url }}"></script>
 {% for js in page.js %}
+  {% if js contains '://' %}
+  <script type="text/javascript" src="{{ js }}"></script>
+  {% else %}
   <script type="text/javascript" src="{{ js | relative_url }}"></script>
+  {% endif %}
 {% endfor %}
